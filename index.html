@@ -1207,7 +1207,6 @@
                 <a href="#how-it-works">Como Funciona</a>
                 <a href="#catalog">Missões</a>
                 <a href="#levels">Níveis</a>
-                <a href="#progress">Progresso</a>
                 <a href="#faq">FAQ</a>
             </nav>
         </div>
@@ -1485,23 +1484,7 @@
                 </div>
             </div>
         </section>
-
-
-        <section id="progress" class="progress">
-            <h2>Seu Progresso na Jornada</h2>
-            <p>Acompanhe seu desenvolvimento e próximas metas</p>
-            <div class="progress-container">
-                <div class="progress-input-group">
-                    <input type="email" id="emailInput" placeholder="Digite seu e-mail Nestlé">
-                    <button class="cta-button" onclick="verProgresso()">Ver Progresso</button>
-                </div>
-                <div id="progressFrameContainer" class="progress-iframe-container" style="display:none;">
-                    <iframe id="progressFrame" src="" title="Meu Progresso"></iframe>
-                </div>
-            </div>
-        </section>
-
-
+        <!-- Seção de progresso removida -->
 
         <section id="faq" class="faq">
             <h2>Perguntas Frequentes</h2>
@@ -1612,22 +1595,6 @@
             if (!isActive) {
                 button.classList.add('active');
                 content.classList.add('show');
-            }
-        }
-
-        function verProgresso() {
-            const emailInput = document.getElementById('emailInput');
-            const email = emailInput.value;
-            const progressFrame = document.getElementById('progressFrame');
-            const progressFrameContainer = document.getElementById('progressFrameContainer');
-
-            if (email) {
-                // Substitua 'shrZZZZZZZZZZ' pela URL da sua view 'Meu Progresso' do Airtable
-                progressFrame.src = `https://airtable.com/embed/appOjBln3sa0z3rtE/pagCEgCiCrXD1f1JH/form?filter_Email=${encodeURIComponent(email)}`;
-                progressFrameContainer.style.display = 'block';
-            } else {
-                alert('Por favor, digite seu e-mail Nestlé para ver seu progresso.');
-                progressFrameContainer.style.display = 'none';
             }
         }
     </script>
