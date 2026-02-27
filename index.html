@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,8 @@
         }
 
         :root {
-            --color-primary: #007a33; /* Verde oficial Nestlé Regenerar */
+            --color-primary: #007a33;
+            /* Verde oficial Nestlé Regenerar */
             --color-secondary: #00a651;
             --color-accent: #ffcc00;
             --color-light: #f4f9f4;
@@ -167,22 +169,50 @@
         .hero-el {
             position: absolute;
             height: auto;
-            filter: drop-shadow(0 15px 30px rgba(0,77,33,0.15));
+            filter: drop-shadow(0 15px 30px rgba(0, 77, 33, 0.15));
             animation: float-bee 5s ease-in-out infinite;
             z-index: 5;
         }
 
         @keyframes float-bee {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(1deg); }
-            50% { transform: translateY(-30px) rotate(2deg); }
-            75% { transform: translateY(-15px) rotate(1deg); }
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            25% {
+                transform: translateY(-20px) rotate(1deg);
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(2deg);
+            }
+
+            75% {
+                transform: translateY(-15px) rotate(1deg);
+            }
         }
 
-        .el-tucano { display: none; }
-        .el-abelha { position: relative; top: 0; left: 0; width: 200px; animation-delay: 0s; }
-        .el-cacau { display: none; }
-        .el-vaca { display: none; }
+        .el-tucano {
+            display: none;
+        }
+
+        .el-abelha {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 200px;
+            animation-delay: 0s;
+        }
+
+        .el-cacau {
+            display: none;
+        }
+
+        .el-vaca {
+            display: none;
+        }
 
         .hero-logo {
             margin: 2rem 0;
@@ -227,7 +257,7 @@
             text-align: center;
         }
 
-        section > p:first-of-type {
+        section>p:first-of-type {
             text-align: center;
             color: var(--color-text-light);
             margin-bottom: 2rem;
@@ -445,7 +475,7 @@
             margin-bottom: 0.5rem;
         }
 
-        .catalog > p {
+        .catalog>p {
             color: var(--color-text-light);
             font-size: 1rem;
             margin-bottom: 2rem;
@@ -608,7 +638,7 @@
             color: var(--color-text);
             font-size: 1rem;
             line-height: 1.6;
-        }   margin: 0;
+            margin: 0;
         }
 
         /* ===== CATEGORIAS ===== */
@@ -687,7 +717,8 @@
         }
 
         .progress-iframe-container {
-            min-height: 300px; /* Altura mínima para o iframe */
+            min-height: 300px;
+            /* Altura mínima para o iframe */
             border: 1px solid var(--color-border);
             border-radius: 8px;
             overflow: hidden;
@@ -705,7 +736,8 @@
         }
 
         .ranking-iframe-container {
-            min-height: 500px; /* Altura mínima para o iframe */
+            min-height: 500px;
+            /* Altura mínima para o iframe */
             border: 1px solid var(--color-border);
             border-radius: 8px;
             overflow: hidden;
@@ -784,7 +816,10 @@
 
         .cta-final-elements {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: 2;
             pointer-events: none;
         }
@@ -792,14 +827,29 @@
         .cta-el {
             position: absolute;
             height: auto;
-            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
             animation: float-organic 15s ease-in-out infinite;
         }
 
-        .cta-el-tucano { display: none; }
-        .cta-el-abelha { top: 50%; left: 8%; width: 200px; animation-delay: -5s; transform: translateY(-50%); }
-        .cta-el-cacau { display: none; }
-        .cta-el-vaca { display: none; }
+        .cta-el-tucano {
+            display: none;
+        }
+
+        .cta-el-abelha {
+            top: 50%;
+            left: 8%;
+            width: 200px;
+            animation-delay: -5s;
+            transform: translateY(-50%);
+        }
+
+        .cta-el-cacau {
+            display: none;
+        }
+
+        .cta-el-vaca {
+            display: none;
+        }
 
         .cta-final-content {
             position: relative;
@@ -824,7 +874,8 @@
 
         /* ===== FOOTER ===== */
         footer {
-            background-color: #f8f8f8; /* Cinza claro para contraste com logo preto */
+            background-color: #f8f8f8;
+            /* Cinza claro para contraste com logo preto */
             color: #1e1e1e;
             padding: 2.5rem 2rem;
             border-top: 1px solid #e0e0e0;
@@ -859,7 +910,8 @@
         }
 
         .footer-right {
-            display: none; /* Remover a seção direita */
+            display: none;
+            /* Remover a seção direita */
         }
 
         .footer-right p {
@@ -927,7 +979,7 @@
                 flex-direction: column;
                 width: 100%;
                 padding: 1rem;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 z-index: 100;
             }
 
@@ -1117,7 +1169,8 @@
                 margin-bottom: 2rem;
             }
 
-            .steps, .categories-grid {
+            .steps,
+            .categories-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1140,11 +1193,13 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663034600351/CpJJqyQNVnthBKZd.svg" alt="Nestlé Regenerar">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663034600351/CpJJqyQNVnthBKZd.svg"
+                    alt="Nestlé Regenerar">
             </div>
             <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
             <nav id="navMenu">
@@ -1161,11 +1216,11 @@
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
-        
+
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
-        
+
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
@@ -1176,11 +1231,13 @@
     <main>
         <section class="hero">
             <div class="hero-elements">
-                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663034600351/YaMeZWDqQANguydJ.svg" class="hero-el el-abelha" alt="Abelha Voando">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663034600351/YaMeZWDqQANguydJ.svg"
+                    class="hero-el el-abelha" alt="Abelha Voando">
             </div>
             <div class="hero-content">
                 <h1>Jornada Regenera 2026</h1>
-                <p>Sua ação transforma o futuro. Uma iniciativa para cultivar um amanhã mais sustentável e regenerativo.</p>
+                <p>Sua ação transforma o futuro. Uma iniciativa para cultivar um amanhã mais sustentável e regenerativo.
+                </p>
                 <a href="#about" class="cta-button">Descobrir a Jornada</a>
             </div>
         </section>
@@ -1192,17 +1249,22 @@
                 <div class="about-text">
                     <h3>Transformando Ações em Impacto</h3>
                     <p>
-                        A Jornada Regenera 2026 é um programa de engajamento que reconhece e celebra as contribuições de cada colaborador Nestlé para a sustentabilidade e a regeneração do planeta.
+                        A Jornada Regenera 2026 é um programa de engajamento que reconhece e celebra as contribuições de
+                        cada colaborador Nestlé para a sustentabilidade e a regeneração do planeta.
                     </p>
                     <p>
-                        Cada ação que você realiza — seja aprendendo sobre sustentabilidade, participando de iniciativas, agindo no dia a dia ou influenciando colegas — gera pontos e o leva a níveis cada vez mais altos.
+                        Cada ação que você realiza — seja aprendendo sobre sustentabilidade, participando de
+                        iniciativas, agindo no dia a dia ou influenciando colegas — gera pontos e o leva a níveis cada
+                        vez mais altos.
                     </p>
                     <p>
-                        Durante 12 meses, você será parte de uma jornada coletiva rumo a um futuro mais verde e regenerativo. Sua participação importa. Seu impacto é real.
+                        Durante 12 meses, você será parte de uma jornada coletiva rumo a um futuro mais verde e
+                        regenerativo. Sua participação importa. Seu impacto é real.
                     </p>
                 </div>
-<div class="about-visual">
-                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663034600351/RlITqGHYRUMtHYfz.svg" alt="Impacto Regenerativo">
+                <div class="about-visual">
+                    <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663034600351/RlITqGHYRUMtHYfz.svg"
+                        alt="Impacto Regenerativo">
                 </div>
             </div>
         </section>
@@ -1246,26 +1308,37 @@
                     </button>
                     <div class="dropdown-content">
                         <div class="actions-list">
-                            <div class="action-item"><span>1. Assista ao vídeo "O que é Regeneração?"</span> <span class="pts">1 pt</span></div>
-                            <div class="action-item"><span>2. Responda o Quiz "Net Zero Essencial"</span> <span class="pts">1 pt</span></div>
-                            <div class="action-item"><span>3. Leia o "Agriculture Framework"</span> <span class="pts">1 pt</span></div>
-                            <div class="action-item"><span>4. Estude o Artigo "Direitos Humanos na Cadeia"</span> <span class="pts">1 pt</span></div>
-                            <div class="action-item"><span>5. Explore o Infográfico "Ciclo da Água Regenerativa"</span> <span class="pts">1 pt</span></div>
-                            <div class="action-item"><span>6. Ouça o Podcast "Vozes da Regeneração"</span> <span class="pts">1 pt</span></div>
-                            <div class="action-item"><span>7. Complete o Curso "ESG para Iniciantes"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>8. Analise o Relatório "Valor Compartilhado"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>9. Revise o Estudo de Caso "Café Regenera"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>10. Domine o Módulo "Embalagens Sustentáveis"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>11. Assista ao Documentário "Do Campo à Mesa"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>12. Consulte o Guia "Biodiversidade e Solo"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>13. Estude a Apresentação "Net Zero Roadmap"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>14. Compreenda o Artigo "Impacto Social do Cacau"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>15. Conclua o Curso "Ética e Compliance ESG"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>16. Analise a "Análise de Riscos Climáticos"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>17. Explore o Estudo "Pecuária Regenerativa"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>18. Leia o Whitepaper "Inovação em Água"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>19. Participe do Treinamento "Liderança ESG"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>20. Experimente a Simulação "Crise Climática"</span> <span class="pts">2 pts</span></div>
+                            <div class="action-item"><span>1. Assistir ao vídeo Fundamentos da Sustentabilidade –
+                                    Introdução 1/12</span> <span class="pts">1 pt</span></div>
+                            <div class="action-item"><span>2. Assistir ao vídeo Roteiro Bom para o Planeta</span> <span
+                                    class="pts">1 pt</span></div>
+                            <div class="action-item"><span>3. Assistir ao vídeo Desperdício Alimentar</span> <span
+                                    class="pts">1 pt</span></div>
+                            <div class="action-item"><span>4. Assistir ao vídeo Direitos Humanos</span> <span
+                                    class="pts">1 pt</span></div>
+                            <div class="action-item"><span>5. Assistir ao vídeo Gestão da Água</span> <span
+                                    class="pts">1 pt</span></div>
+                            <div class="action-item"><span>6. Assistir ao vídeo Fornecimento Responsável</span> <span
+                                    class="pts">1 pt</span></div>
+                            <div class="action-item"><span>7. Assistir ao vídeo Sustentabilidade de Embalagens</span>
+                                <span class="pts">1 pt</span>
+                            </div>
+                            <div class="action-item"><span>8. Assistir ao vídeo Finanças</span> <span class="pts">1
+                                    pt</span></div>
+                            <div class="action-item"><span>9. Assistir ao vídeo Digital para a Sustentabilidade</span>
+                                <span class="pts">1 pt</span>
+                            </div>
+                            <div class="action-item"><span>10. Assistir ao vídeo Relatórios de Sustentabilidade</span>
+                                <span class="pts">1 pt</span>
+                            </div>
+                            <div class="action-item"><span>11. Assistir ao vídeo Clima Net Zero</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>12. Assistir ao vídeo Agricultura Regenerativa</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>13. Assistir um treinamento de sustentabilidade no GROW, para
+                                    além do Fundamentos da Sustentabilidade</span> <span class="pts">7 pts</span></div>
+                            <div class="action-item"><span>14. Escutar um podcast ou ler um artigo relacionado a
+                                    ESG</span> <span class="pts">1 pt</span></div>
                         </div>
                     </div>
                 </div>
@@ -1278,26 +1351,48 @@
                     </button>
                     <div class="dropdown-content">
                         <div class="actions-list">
-                            <div class="action-item"><span>21. Participe da Roda de Conversa "Meu ESG"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>22. Contribua no Fórum "Ideias Regenera"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>23. Assista ao Webinar "Diálogos Sustentáveis"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>24. Integre-se ao Encontro "Time Regenera"</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>25. Responda à Pesquisa de Engajamento ESG</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>26. Voluntarie no Mutirão de Limpeza Virtual</span> <span class="pts">2 pts</span></div>
-                            <div class="action-item"><span>27. Participe do Grupo de Estudo "ODS na Nestlé"</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>28. Colabore na Sessão de Brainstorming "Inovação"</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>29. Compareça ao Evento "Dia da Terra Nestlé"</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>30. Integre o Comitê de Sustentabilidade</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>31. Engaje-se na Mentoria Reversa ESG</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>32. Participe do Desafio "Consumo Consciente"</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>33. Contribua no Fórum de Boas Práticas</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>34. Converse com a Liderança ESG</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>35. Participe do Painel de Especialistas</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>36. Voluntarie no Programa de Voluntariado Corporativo</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>37. Participe do Workshop "Futuro Regenera"</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>38. Debata os "Desafios da Cadeia"</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>39. Encontre-se com os "Inovadores ESG"</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>40. Forneça Feedback Estratégico ESG</span> <span class="pts">3 pts</span></div>
+                            <div class="action-item"><span>21. Participe da Roda de Conversa "Meu ESG"</span> <span
+                                    class="pts">2 pts</span></div>
+                            <div class="action-item"><span>22. Contribua no Fórum "Ideias Regenera"</span> <span
+                                    class="pts">2 pts</span></div>
+                            <div class="action-item"><span>23. Assista ao Webinar "Diálogos Sustentáveis"</span> <span
+                                    class="pts">2 pts</span></div>
+                            <div class="action-item"><span>24. Integre-se ao Encontro "Time Regenera"</span> <span
+                                    class="pts">2 pts</span></div>
+                            <div class="action-item"><span>25. Responda à Pesquisa de Engajamento ESG</span> <span
+                                    class="pts">2 pts</span></div>
+                            <div class="action-item"><span>26. Voluntarie no Mutirão de Limpeza Virtual</span> <span
+                                    class="pts">2 pts</span></div>
+                            <div class="action-item"><span>27. Participe do Grupo de Estudo "ODS na Nestlé"</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>28. Colabore na Sessão de Brainstorming "Inovação"</span>
+                                <span class="pts">3 pts</span>
+                            </div>
+                            <div class="action-item"><span>29. Compareça ao Evento "Dia da Terra Nestlé"</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>30. Integre o Comitê de Sustentabilidade</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>31. Engaje-se na Mentoria Reversa ESG</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>32. Participe do Desafio "Consumo Consciente"</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>33. Contribua no Fórum de Boas Práticas</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>34. Converse com a Liderança ESG</span> <span class="pts">3
+                                    pts</span></div>
+                            <div class="action-item"><span>35. Participe do Painel de Especialistas</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>36. Voluntarie no Programa de Voluntariado Corporativo</span>
+                                <span class="pts">3 pts</span>
+                            </div>
+                            <div class="action-item"><span>37. Participe do Workshop "Futuro Regenera"</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>38. Debata os "Desafios da Cadeia"</span> <span class="pts">3
+                                    pts</span></div>
+                            <div class="action-item"><span>39. Encontre-se com os "Inovadores ESG"</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>40. Forneça Feedback Estratégico ESG</span> <span
+                                    class="pts">3 pts</span></div>
                         </div>
                     </div>
                 </div>
@@ -1310,26 +1405,46 @@
                     </button>
                     <div class="dropdown-content">
                         <div class="actions-list">
-                            <div class="action-item"><span>41. Descarte Corretamente as Pilhas</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>42. Utilize Caneca Reutilizável</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>43. Imprima com Consciência</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>44. Apague Luzes e Monitores</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>45. Separe os Resíduos na Coleta Seletiva</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>46. Consuma Água Conscientemente</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>47. Otimize suas Reuniões</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>48. Escolha Transporte Sustentável</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>49. Consuma Refeição "Plant-Based"</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>50. Realize Auditoria de Desperdício</span> <span class="pts">4 pts</span></div>
-                            <div class="action-item"><span>51. Reutilize Materiais</span> <span class="pts">4 pts</span></div>
-                            <div class="action-item"><span>52. Sugira Melhorias no Processo</span> <span class="pts">4 pts</span></div>
-                            <div class="action-item"><span>53. Implemente Gestão de Resíduos Orgânicos</span> <span class="pts">4 pts</span></div>
-                            <div class="action-item"><span>54. Seja Embaixador "Zero Desperdício"</span> <span class="pts">4 pts</span></div>
-                            <div class="action-item"><span>55. Implemente Prática Regenerativa</span> <span class="pts">4 pts</span></div>
-                            <div class="action-item"><span>56. Reduza suas Viagens</span> <span class="pts">4 pts</span></div>
-                            <div class="action-item"><span>57. Use Produtos Sustentáveis</span> <span class="pts">4 pts</span></div>
-                            <div class="action-item"><span>58. Otimize o Consumo de Energia</span> <span class="pts">4 pts</span></div>
-                            <div class="action-item"><span>59. Crie Projeto de Economia Circular</span> <span class="pts">4 pts</span></div>
-                            <div class="action-item"><span>60. Promova Consumo Responsável de Água</span> <span class="pts">4 pts</span></div>
+                            <div class="action-item"><span>41. Descarte Corretamente as Pilhas</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>42. Utilize Caneca Reutilizável</span> <span class="pts">3
+                                    pts</span></div>
+                            <div class="action-item"><span>43. Imprima com Consciência</span> <span class="pts">3
+                                    pts</span></div>
+                            <div class="action-item"><span>44. Apague Luzes e Monitores</span> <span class="pts">3
+                                    pts</span></div>
+                            <div class="action-item"><span>45. Separe os Resíduos na Coleta Seletiva</span> <span
+                                    class="pts">3 pts</span></div>
+                            <div class="action-item"><span>46. Consuma Água Conscientemente</span> <span class="pts">3
+                                    pts</span></div>
+                            <div class="action-item"><span>47. Otimize suas Reuniões</span> <span class="pts">3
+                                    pts</span></div>
+                            <div class="action-item"><span>48. Escolha Transporte Sustentável</span> <span class="pts">3
+                                    pts</span></div>
+                            <div class="action-item"><span>49. Consuma Refeição "Plant-Based"</span> <span class="pts">3
+                                    pts</span></div>
+                            <div class="action-item"><span>50. Realize Auditoria de Desperdício</span> <span
+                                    class="pts">4 pts</span></div>
+                            <div class="action-item"><span>51. Reutilize Materiais</span> <span class="pts">4 pts</span>
+                            </div>
+                            <div class="action-item"><span>52. Sugira Melhorias no Processo</span> <span class="pts">4
+                                    pts</span></div>
+                            <div class="action-item"><span>53. Implemente Gestão de Resíduos Orgânicos</span> <span
+                                    class="pts">4 pts</span></div>
+                            <div class="action-item"><span>54. Seja Embaixador "Zero Desperdício"</span> <span
+                                    class="pts">4 pts</span></div>
+                            <div class="action-item"><span>55. Implemente Prática Regenerativa</span> <span
+                                    class="pts">4 pts</span></div>
+                            <div class="action-item"><span>56. Reduza suas Viagens</span> <span class="pts">4 pts</span>
+                            </div>
+                            <div class="action-item"><span>57. Use Produtos Sustentáveis</span> <span class="pts">4
+                                    pts</span></div>
+                            <div class="action-item"><span>58. Otimize o Consumo de Energia</span> <span class="pts">4
+                                    pts</span></div>
+                            <div class="action-item"><span>59. Crie Projeto de Economia Circular</span> <span
+                                    class="pts">4 pts</span></div>
+                            <div class="action-item"><span>60. Promova Consumo Responsável de Água</span> <span
+                                    class="pts">4 pts</span></div>
                         </div>
                     </div>
                 </div>
@@ -1342,26 +1457,47 @@
                     </button>
                     <div class="dropdown-content">
                         <div class="actions-list">
-                            <div class="action-item"><span>61. Mentore "Primeiros Passos"</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>62. Compartilhe Conhecimento ESG</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>63. Escreva Artigo Interno "Minha Jornada"</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>64. Seja Embaixador de Programa</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>65. Proponha Melhoria ESG</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>66. Lidere Grupo de Trabalho</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>67. Mentore Projeto Sustentável</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>68. Apresente Palestra Interna "Impacto Regenera"</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>69. Represente em Evento Externo</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>70. Cocrie com Stakeholders</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>71. Desenvolva Treinamento</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>72. Publique em Canal Interno</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>73. Estabeleça Parceria Interna ESG</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>74. Seja Influenciador Digital Interno</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>75. Realize Benchmarking de Boas Práticas</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>76. Proponha Inovação Aberta</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>77. Articule com Liderança</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>78. Seja Embaixador de Valores</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>79. Desenvolva Ferramenta ESG</span> <span class="pts">5 pts</span></div>
-                            <div class="action-item"><span>80. Relate seu Impacto Pessoal</span> <span class="pts">5 pts</span></div>
+                            <div class="action-item"><span>61. Mentore "Primeiros Passos"</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>62. Compartilhe Conhecimento ESG</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>63. Escreva Artigo Interno "Minha Jornada"</span> <span
+                                    class="pts">5 pts</span></div>
+                            <div class="action-item"><span>64. Seja Embaixador de Programa</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>65. Proponha Melhoria ESG</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>66. Lidere Grupo de Trabalho</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>67. Mentore Projeto Sustentável</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>68. Apresente Palestra Interna "Impacto Regenera"</span>
+                                <span class="pts">5 pts</span>
+                            </div>
+                            <div class="action-item"><span>69. Represente em Evento Externo</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>70. Cocrie com Stakeholders</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>71. Desenvolva Treinamento</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>72. Publique em Canal Interno</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>73. Estabeleça Parceria Interna ESG</span> <span
+                                    class="pts">5 pts</span></div>
+                            <div class="action-item"><span>74. Seja Influenciador Digital Interno</span> <span
+                                    class="pts">5 pts</span></div>
+                            <div class="action-item"><span>75. Realize Benchmarking de Boas Práticas</span> <span
+                                    class="pts">5 pts</span></div>
+                            <div class="action-item"><span>76. Proponha Inovação Aberta</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>77. Articule com Liderança</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>78. Seja Embaixador de Valores</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>79. Desenvolva Ferramenta ESG</span> <span class="pts">5
+                                    pts</span></div>
+                            <div class="action-item"><span>80. Relate seu Impacto Pessoal</span> <span class="pts">5
+                                    pts</span></div>
                         </div>
                     </div>
                 </div>
@@ -1372,12 +1508,14 @@
             <h2>Seus Níveis de Evolução</h2>
             <p>Progresse e torne-se um Guardião da Regeneração</p>
             <div class="levels-explanation">
-                <p><strong>Como funciona:</strong> Cada ação que você realiza no catálogo abaixo gera pontos. Acumule pontos e suba de nível! Quanto mais você se engaja, mais rápido você progride no voo da abelha.</p>
+                <p><strong>Como funciona:</strong> Cada ação que você realiza no catálogo abaixo gera pontos. Acumule
+                    pontos e suba de nível! Quanto mais você se engaja, mais rápido você progride no voo da abelha.</p>
             </div>
             <div class="levels-journey">
                 <svg class="levels-path" viewBox="0 0 1000 200" preserveAspectRatio="xMidYMid meet">
                     <!-- Rastro da abelha (linha pontilhada) -->
-                    <path d="M 50 100 Q 250 50 450 100 T 950 100" stroke="var(--color-secondary)" stroke-width="3" stroke-dasharray="10,5" fill="none" opacity="0.6"/>
+                    <path d="M 50 100 Q 250 50 450 100 T 950 100" stroke="var(--color-secondary)" stroke-width="3"
+                        stroke-dasharray="10,5" fill="none" opacity="0.6" />
                 </svg>
                 <div class="levels-container">
                     <div class="level-node">
@@ -1397,7 +1535,8 @@
                         <div class="level-info">
                             <h3>Abelha Exploradora</h3>
                             <p class="points">50 - 149 pontos</p>
-                            <p class="description">Explorando e coletando impacto com missões regulares e comprometidas.</p>
+                            <p class="description">Explorando e coletando impacto com missões regulares e comprometidas.
+                            </p>
                         </div>
                     </div>
                     <div class="level-node">
@@ -1451,7 +1590,9 @@
                         <span class="icon">▼</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Clique no botão "Registrar Minha Primeira Ação" e preencha o formulário com os detalhes da ação realizada. Anexe uma foto ou comprovante que demonstre a ação. Após a submissão, a equipe validará sua evidência em até 30 dias.</p>
+                        <p>Clique no botão "Registrar Minha Primeira Ação" e preencha o formulário com os detalhes da
+                            ação realizada. Anexe uma foto ou comprovante que demonstre a ação. Após a submissão, a
+                            equipe validará sua evidência em até 30 dias.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1460,7 +1601,8 @@
                         <span class="icon">▼</span>
                     </div>
                     <div class="faq-answer">
-                        <p>A validação das evidências é realizada pela equipe de moderação e pode levar até 30 dias. Você receberá uma notificação quando sua evidência for aprovada ou rejeitada.</p>
+                        <p>A validação das evidências é realizada pela equipe de moderação e pode levar até 30 dias.
+                            Você receberá uma notificação quando sua evidência for aprovada ou rejeitada.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1469,7 +1611,8 @@
                         <span class="icon">▼</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Você pode enviar até 2 evidências por semana. Cada ação deve ter uma evidência clara e válida. Quanto mais você participar, mais pontos acumula e mais rápido sobe de nível!</p>
+                        <p>Você pode enviar até 2 evidências por semana. Cada ação deve ter uma evidência clara e
+                            válida. Quanto mais você participar, mais pontos acumula e mais rápido sobe de nível!</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1478,7 +1621,8 @@
                         <span class="icon">▼</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Se sua evidência for rejeitada, você receberá uma notificação com o motivo. Você pode corrigir e reenviar a evidência quantas vezes precisar até que seja aprovada.</p>
+                        <p>Se sua evidência for rejeitada, você receberá uma notificação com o motivo. Você pode
+                            corrigir e reenviar a evidência quantas vezes precisar até que seja aprovada.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1487,7 +1631,10 @@
                         <span class="icon">▼</span>
                     </div>
                     <div class="faq-answer">
-                        <p>O objetivo é engajar todos os colaboradores Nestlé em uma jornada de 12 meses rumo à regeneração. Queremos que você não apenas acumule pontos, mas que internalize a importância da sustentabilidade e se torne um multiplicador de mudanças positivas, contribuindo para um futuro mais verde e sustentável.</p>
+                        <p>O objetivo é engajar todos os colaboradores Nestlé em uma jornada de 12 meses rumo à
+                            regeneração. Queremos que você não apenas acumule pontos, mas que internalize a importância
+                            da sustentabilidade e se torne um multiplicador de mudanças positivas, contribuindo para um
+                            futuro mais verde e sustentável.</p>
                     </div>
                 </div>
             </div>
@@ -1495,12 +1642,14 @@
 
         <section class="cta-final">
             <div class="cta-final-elements">
-                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663034600351/YaMeZWDqQANguydJ.svg" class="cta-el cta-el-abelha" alt="">
+                <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663034600351/YaMeZWDqQANguydJ.svg"
+                    class="cta-el cta-el-abelha" alt="">
             </div>
             <div class="cta-final-content">
                 <h2>Pronto para Começar?</h2>
                 <p>Registre sua primeira ação e faça parte da transformação rumo a um futuro regenerativo.</p>
-                <a href="https://airtable.com/embed/appOjBln3sa0z3rtE/pagCEgCiCrXD1f1JH/form" class="cta-button" target="_blank">Registrar Minha Primeira Ação</a>
+                <a href="https://airtable.com/embed/appOjBln3sa0z3rtE/pagCEgCiCrXD1f1JH/form" class="cta-button"
+                    target="_blank">Registrar Minha Primeira Ação</a>
             </div>
         </section>
     </main>
@@ -1509,7 +1658,8 @@
         <div class="footer-container">
             <div class="footer-left">
                 <span class="footer-text">Projeto realizado com muito orgulho pela</span>
-                <img src="https://auiri.com.br/wp-content/uploads/2023/05/logo-auiri-inovacao-para-impacto.svg" class="footer-logo" alt="Auíri - Inovação para Impacto">
+                <img src="https://auiri.com.br/wp-content/uploads/2023/05/logo-auiri-inovacao-para-impacto.svg"
+                    class="footer-logo" alt="Auíri - Inovação para Impacto">
             </div>
         </div>
     </footer>
@@ -1525,13 +1675,13 @@
         function toggleDropdown(button) {
             const content = button.nextElementSibling;
             const isActive = button.classList.contains('active');
-            
+
             // Fechar todos os dropdowns
             document.querySelectorAll('.dropdown-btn').forEach(btn => {
                 btn.classList.remove('active');
                 btn.nextElementSibling.classList.remove('show');
             });
-            
+
             // Abrir o dropdown clicado (se não estava aberto)
             if (!isActive) {
                 button.classList.add('active');
@@ -1556,4 +1706,5 @@
         }
     </script>
 </body>
+
 </html>
