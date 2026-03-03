@@ -641,6 +641,88 @@
             white-space: nowrap;
         }
 
+        /* ===== ACTION ITEM EXPANSÍVEL ===== */
+        .action-item {
+            cursor: default;
+            flex-direction: column;
+            align-items: stretch;
+            padding: 0;
+            border-left: 4px solid var(--color-secondary);
+        }
+
+        .action-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            cursor: pointer;
+            user-select: none;
+            gap: 0.5rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .action-item-header:hover {
+            background-color: rgba(0, 122, 51, 0.05);
+            border-radius: 0 8px 0 0;
+        }
+
+        .action-item-header .action-title {
+            flex: 1;
+            text-align: left;
+            font-size: 0.95rem;
+            color: var(--color-text);
+        }
+
+        .action-item-header .action-right {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .action-toggle {
+            font-size: 0.7rem;
+            color: var(--color-secondary);
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .action-item.open .action-toggle {
+            transform: rotate(180deg);
+        }
+
+        .action-sub {
+            display: none;
+            padding: 0.7rem 1rem 0.9rem 1rem;
+            background-color: rgba(0, 122, 51, 0.04);
+            border-top: 1px dashed var(--color-border);
+        }
+
+        .action-item.open .action-sub {
+            display: block;
+        }
+
+        .action-sub-desc {
+            font-size: 0.88rem;
+            color: var(--color-text-light);
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+        }
+
+        .action-sub-evidence {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.82rem;
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        .action-sub-evidence::before {
+            content: '📎';
+            font-size: 0.9rem;
+        }
+
         .levels-explanation {
             background-color: var(--color-light);
             padding: 1.5rem;
@@ -1332,37 +1414,240 @@
                     </button>
                     <div class="dropdown-content">
                         <div class="actions-list">
-                            <div class="action-item"><span>1. Assistir ao vídeo Fundamentos da Sustentabilidade –
-                                    Introdução 1/12</span> <span class="pts">1 pt</span></div>
-                            <div class="action-item"><span>2. Assistir ao vídeo Roteiro Bom para o Planeta</span> <span
-                                    class="pts">1 pt</span></div>
-                            <div class="action-item"><span>3. Assistir ao vídeo Desperdício Alimentar</span> <span
-                                    class="pts">1 pt</span></div>
-                            <div class="action-item"><span>4. Assistir ao vídeo Direitos Humanos</span> <span
-                                    class="pts">1 pt</span></div>
-                            <div class="action-item"><span>5. Assistir ao vídeo Gestão da Água</span> <span
-                                    class="pts">1 pt</span></div>
-                            <div class="action-item"><span>6. Assistir ao vídeo Fornecimento Responsável</span> <span
-                                    class="pts">1 pt</span></div>
-                            <div class="action-item"><span>7. Assistir ao vídeo Sustentabilidade de Embalagens</span>
-                                <span class="pts">1 pt</span>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">1. Assistir ao vídeo Fundamentos da Sustentabilidade –
+                                        Introdução 1/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">1 pt</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Entenda os conceitos-base que dão início à jornada de
+                                        sustentabilidade.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
                             </div>
-                            <div class="action-item"><span>8. Assistir ao vídeo Finanças</span> <span class="pts">1
-                                    pt</span></div>
-                            <div class="action-item"><span>9. Assistir ao vídeo Digital para a Sustentabilidade</span>
-                                <span class="pts">1 pt</span>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">2. Assistir ao vídeo Roteiro Bom para o Planeta -
+                                        2/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">1 pt</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Conheça a estratégia que guia as ações da Nestlé para
+                                        gerar impacto positivo.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
                             </div>
-                            <div class="action-item"><span>10. Assistir ao vídeo Relatórios de Sustentabilidade</span>
-                                <span class="pts">1 pt</span>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">3. Assistir ao vídeo Desperdício Alimentar - 3/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">1 pt</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Descubra como reduzir perdas ajuda a construir sistemas
+                                        alimentares mais sustentáveis.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
                             </div>
-                            <div class="action-item"><span>11. Assistir ao vídeo Clima Net Zero</span> <span
-                                    class="pts">3 pts</span></div>
-                            <div class="action-item"><span>12. Assistir ao vídeo Agricultura Regenerativa</span> <span
-                                    class="pts">3 pts</span></div>
-                            <div class="action-item"><span>13. Assistir um treinamento de sustentabilidade no GROW, para
-                                    além do Fundamentos da Sustentabilidade</span> <span class="pts">7 pts</span></div>
-                            <div class="action-item"><span>14. Escutar um podcast ou ler um artigo relacionado a
-                                    ESG</span> <span class="pts">1 pt</span></div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">4. Assistir ao vídeo Direitos Humanos - 4/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">1 pt</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Aprenda como o respeito aos direitos humanos orienta
+                                        decisões em toda a cadeia.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">5. Assistir ao vídeo Gestão da Água - 5/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">1 pt</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Explore por que a água é um recurso-chave e como usá-la
+                                        de
+                                        forma responsável.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">6. Assistir ao vídeo Fornecimento Responsável -
+                                        6/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">1 pt</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Entenda como práticas éticas fortalecem fornecedores e
+                                        territórios.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">7. Assistir ao vídeo Sustentabilidade de
+                                        Embalagens - 7/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">1 pt</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Veja como evoluir embalagens é parte do compromisso com o
+                                        planeta.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">8. Assistir ao vídeo Finanças - 8/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">1 pt</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Descubra como sustentabilidade também entra na conta das
+                                        decisões financeiras.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">9. Assistir ao vídeo Digital para a
+                                        Sustentabilidade - 9/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">1 pt</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Veja como a tecnologia acelera soluções sustentáveis.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">10. Assistir ao vídeo Relatórios de
+                                        Sustentabilidade - 10/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">1 pt</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Aprenda como metas, indicadores e transparência movem a
+                                        estratégia ESG.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">11. Assistir ao vídeo Clima Net Zero - 11/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">3 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Entre no desafio climático e conheça as metas para
+                                        reduzir emissões.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">12. Assistir ao vídeo Agricultura Regenerativa -
+                                        12/12</span>
+                                    <div class="action-right">
+                                        <span class="pts">3 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Avance de nível entendendo como regenerar o solo
+                                        fortalece o futuro da produção.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen da tela final + Comentário
+                                        no form sobre o seu principal aprendizado.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">13. Assistir um treinamento de sustentabilidade no GROW,
+                                        para além do Fundamentos da Sustentabilidade</span>
+                                    <div class="action-right">
+                                        <span class="pts">7 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Complete um treinamento de sustentabilidade na plataforma
+                                        GROW e obtenha seu certificado.</p>
+                                    <span class="action-sub-evidence">Evidência: Foto/print do Certificado GROW +
+                                        Comentário no form sobre o seu principal aprendizado.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">14. Escutar um podcast ou ler um artigo relacionado a
+                                        ESG</span>
+                                    <div class="action-right">
+                                        <span class="pts">1 pt</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Aprofunde seu repertório ESG consumindo conteúdo externo
+                                        — podcast ou artigo — relacionado a sustentabilidade.</p>
+                                    <span class="action-sub-evidence">Evidência: Link ou print do podcast/artigo +
+                                        Comentário no form sobre o seu principal aprendizado.</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1375,24 +1660,162 @@
                     </button>
                     <div class="dropdown-content">
                         <div class="actions-list">
-                            <div class="action-item"><span>15. Compartilhar aprendizados que teve no Time
-                                    Regenera.</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>16. Participar de encontros do Time Regenera (presenciais ou
-                                    online).</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>17. Atuar como apoio operacional pontual em campanhas
-                                    Regenera</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>18. Apoiar a mobilização de uma campanha do Time
-                                    Regenera</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>19. Participar ativamente de um encontro presencial,
-                                    treinamento ou webinar ESG</span> <span class="pts">3 pts</span></div>
-                            <div class="action-item"><span>20. Engajar-se em uma ação coletiva de voluntariado ou
-                                    mobilização ESG</span> <span class="pts">7 pts</span></div>
-                            <div class="action-item"><span>21. Registrar e enviar evidências de uma campanha oficial do
-                                    Time Regenera</span> <span class="pts">7 pts</span></div>
-                            <div class="action-item"><span>22. Participar de um grupo de estudo ou comunidade online
-                                    sobre ESG</span> <span class="pts">7 pts</span></div>
-                            <div class="action-item"><span>23. Enviar uma contribuição (relato, fotos, vídeo) para a
-                                    newsletter Regenera</span> <span class="pts">7 pts</span></div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">15. Compartilhar aprendizados que teve no Time
+                                        Regenera.</span>
+                                    <div class="action-right">
+                                        <span class="pts">3 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Postar texto ou vídeo no Viva Engage contando como tem
+                                        sido a experiência de fazer parte do comitê e como tem aplicado os aprendizados
+                                        em seu dia a dia.</p>
+                                    <span class="action-sub-evidence">Evidência: Print do post no Engage.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">16. Participar de encontros do Time Regenera (presenciais
+                                        ou online).</span>
+                                    <div class="action-right">
+                                        <span class="pts">3 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Podem ser encontros promovidos pelo próprio Time ou pela
+                                        área de ESG / gestão do Regenera.</p>
+                                    <span class="action-sub-evidence">Evidência: Foto ou Print do evento + Comentário no
+                                        form sobre a proposta e ganhos do encontro.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">17. Atuar como apoio operacional pontual em campanhas
+                                        Regenera.</span>
+                                    <div class="action-right">
+                                        <span class="pts">3 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Auxiliar o time em ações específicas (ex: montagem de
+                                        espaço, teste de quiz, organização de lista, logística simples).</p>
+                                    <span class="action-sub-evidence">Evidência: Foto da atividade + Comentário no form
+                                        sobre a sua principal contribuição.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">18. Apoiar a mobilização de uma campanha do Time
+                                        Regenera.</span>
+                                    <div class="action-right">
+                                        <span class="pts">3 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Contribuir para a divulgação, convocação ou engajamento
+                                        da campanha na unidade ou nos canais internos.</p>
+                                    <span class="action-sub-evidence">Evidência: Print ou Foto da campanha + Comentário
+                                        no form sobre como você apoiou a campanha.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">19. Participar ativamente de um encontro presencial,
+                                        treinamento ou webinar ESG.</span>
+                                    <div class="action-right">
+                                        <span class="pts">3 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Estar presente e engajado em um espaço de troca sobre
+                                        sustentabilidade ou impacto social.</p>
+                                    <span class="action-sub-evidence">Evidência: Foto ou Print do evento/convite +
+                                        Comentário no form sobre a proposta e ganhos do encontro.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">20. Engajar-se em uma ação coletiva de voluntariado ou
+                                        mobilização ESG.</span>
+                                    <div class="action-right">
+                                        <span class="pts">7 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Participar ativamente de uma ação social ou ambiental,
+                                        presencial ou digital.</p>
+                                    <span class="action-sub-evidence">Evidência: Foto da atividade + Comentário no form
+                                        sobre o que mais te marcou na ação.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">21. Fazer os registros de uma campanha oficial
+                                        do Time Regenera e divulgar.</span>
+                                    <div class="action-right">
+                                        <span class="pts">7 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Produzir um registro (foto, vídeo curto ou relato) de uma
+                                        ação ou participação relacionada à campanha e divulgar nos canais oficiais do
+                                        Time Regenera.</p>
+                                    <span class="action-sub-evidence">Evidência: Arquivo do registro + Comentário no
+                                        form sobre como você o divulgou.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">22. Participar de um grupo de estudo ou comunidade online
+                                        sobre ESG.</span>
+                                    <div class="action-right">
+                                        <span class="pts">7 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Engajar-se de forma recorrente em trocas estruturadas
+                                        sobre sustentabilidade.</p>
+                                    <span class="action-sub-evidence">Evidência: Print Screen do encontro + Comentário
+                                        no form sobre tema e seu propósito nestas trocas.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">23. Enviar uma contribuição (relato, fotos, vídeo) para a
+                                        newsletter Regenera.</span>
+                                    <div class="action-right">
+                                        <span class="pts">7 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Colaborar com o boletim bimestral de ESG da Nestlé com o
+                                        envio de conteúdos, de acordo com o que for solicitado pela gestão do time
+                                        Regenera.</p>
+                                    <span class="action-sub-evidence">Evidência: Print do e-mail enviado + Comentário no
+                                        form sobre o propósito do conteúdo enviado.</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1405,21 +1828,126 @@
                     </button>
                     <div class="dropdown-content">
                         <div class="actions-list">
-                            <div class="action-item"><span>24. Apoio à entrada dos novos colegas no Time Regenera</span>
-                                <span class="pts">7 pts</span>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">24. Apoio à entrada dos novos colegas no Time
+                                        Regenera</span>
+                                    <div class="action-right">
+                                        <span class="pts">7 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Explicar como funcionam os comitês, as campanhas, os
+                                        registros e ações de mobilização de colaboradores.</p>
+                                    <span class="action-sub-evidence">Evidência: Foto do encontro + Comentário no form
+                                        com nome e unidade do novo integrante.</span>
+                                </div>
                             </div>
-                            <div class="action-item"><span>25. Substituir um produto ou insumo de uso coletivo por
-                                    alternativa mais sustentável</span> <span class="pts">15 pts</span></div>
-                            <div class="action-item"><span>26. Apoiar a adoção de uma boa prática já existente na
-                                    unidade</span> <span class="pts">7 pts</span></div>
-                            <div class="action-item"><span>27. Transformar um aprendizado ESG em material
-                                    reutilizável</span> <span class="pts">15 pts</span></div>
-                            <div class="action-item"><span>28. Mobilizar colegas para uma ação ESG concreta</span> <span
-                                    class="pts">15 pts</span></div>
-                            <div class="action-item"><span>29. Viabilizar uma ação ESG entre áreas diferentes
-                                    ESG</span> <span class="pts">20 pts</span></div>
-                            <div class="action-item"><span>30. Testar uma prática ESG em pequena escala e registrar
-                                    aprendizados</span> <span class="pts">15 pts</span></div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">25. Substituir um produto ou insumo de uso coletivo por
+                                        alternativa mais sustentável</span>
+                                    <div class="action-right">
+                                        <span class="pts">15 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Trocar um item ou insumo por opção de menor impacto
+                                        ambiental.</p>
+                                    <span class="action-sub-evidence">Evidência: Foto Antes/Depois + Comentário no form
+                                        sobre o impacto da ação.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">26. Apoiar a adoção de uma boa prática já existente na
+                                        unidade</span>
+                                    <div class="action-right">
+                                        <span class="pts">7 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Contribuir para que uma prática já adotada seja mantida
+                                        ou ampliada.</p>
+                                    <span class="action-sub-evidence">Evidência: Imagem demonstrativa da prática +
+                                        Comentário no form sobre o propósito da ação.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">27. Transformar um aprendizado ESG em material
+                                        reutilizável</span>
+                                    <div class="action-right">
+                                        <span class="pts">15 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Criar resumo, guia curto ou material similar a partir de
+                                        aprendizados de uma campanha ou ação do Regenera, para uso de outras pessoas.
+                                    </p>
+                                    <span class="action-sub-evidence">Evidência: Arquivo/print do material + Comentário
+                                        no form sobre o propósito da ação.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">28. Mobilizar colegas para uma ação ESG concreta</span>
+                                    <div class="action-right">
+                                        <span class="pts">15 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Mobilizar pessoas em torno de um tema específico,
+                                        promovendo uma ação prática coletiva, fora de Campanha.</p>
+                                    <span class="action-sub-evidence">Evidência: Imagem/documento demonstrativo da ação
+                                        coletiva + Comentário no form sobre o propósito da ação.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">29. Viabilizar uma ação ESG entre áreas diferentes
+                                        ESG</span>
+                                    <div class="action-right">
+                                        <span class="pts">20 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Atuar como ponte entre pessoas ou áreas para destravar
+                                        iniciativas.</p>
+                                    <span class="action-sub-evidence">Evidência: Imagem/documento demonstrativo +
+                                        Comentário no form sobre o propósito da ação.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">30. Testar uma prática ESG em pequena escala e registrar
+                                        aprendizados</span>
+                                    <div class="action-right">
+                                        <span class="pts">15 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Executar um teste piloto simples derivado de um tema
+                                        trabalhado em uma campanha do Regenera e relatar resultados e ajustes.</p>
+                                    <span class="action-sub-evidence">Evidência: Imagem/documento demonstrativo +
+                                        Comentário no form sobre o propósito da ação.</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1432,18 +1960,93 @@
                     </button>
                     <div class="dropdown-content">
                         <div class="actions-list">
-                            <div class="action-item"><span>31. Colocar em prática um novo projeto de reciclagem em seu
-                                    local de trabalho</span> <span class="pts">35 pts</span></div>
-                            <div class="action-item"><span>32. Organizar uma roda de conversa sobre o tema de alguma
-                                    campanha Regenera.</span> <span class="pts">15 pts</span></div>
-                            <div class="action-item"><span>33. Apresentar uma proposta ESG para liderança ou gestão da
-                                    unidade</span> <span class="pts">20 pts</span></div>
-                            <div class="action-item"><span>34. Sistematizar e compartilhar uma boa prática ESG da
-                                    unidade</span> <span class="pts">15 pts</span></div>
-                            <div class="action-item"><span>35. Realizar benchmarking estruturado de boas práticas
-                                    ESG</span>
-                                <span class="pts">15 pts</span>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">31. Colocar em prática um novo projeto de reciclagem em
+                                        seu local de trabalho</span>
+                                    <div class="action-right">
+                                        <span class="pts">35 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Desenvolver ou chamar alguém para te ajudar em uma
+                                        iniciativa com potencial de continuidade e replicação.</p>
+                                    <span class="action-sub-evidence">Evidência: Imagem/documento demonstrativo +
+                                        Comentário no form sobre o propósito da ação.</span>
+                                </div>
                             </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">32. Organizar uma roda de conversa sobre o tema de alguma
+                                        campanha Regenera.</span>
+                                    <div class="action-right">
+                                        <span class="pts">15 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Promover uma conversa curta com colegas para estimular
+                                        engajamento e troca.</p>
+                                    <span class="action-sub-evidence">Evidência: Foto do grupo + Comentário no form
+                                        sobre o propósito do encontro.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">33. Apresentar uma proposta ESG para liderança ou gestão
+                                        da unidade</span>
+                                    <div class="action-right">
+                                        <span class="pts">20 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Levar uma proposta estruturada para escuta, validação ou
+                                        encaminhamento da liderança local.</p>
+                                    <span class="action-sub-evidence">Evidência: Arquivo ou print da Proposta +
+                                        Comentário no form sobre o resultado da reunião.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">34. Sistematizar e compartilhar uma boa prática ESG da
+                                        unidade</span>
+                                    <div class="action-right">
+                                        <span class="pts">15 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Documentar uma prática existente ou testada, descrevendo
+                                        como funciona e quais resultados gera.</p>
+                                    <span class="action-sub-evidence">Evidência: Arquivo ou print do documento +
+                                        Comentário no form sobre a prática.</span>
+                                </div>
+                            </div>
+
+                            <div class="action-item" onclick="toggleAction(this)">
+                                <div class="action-item-header">
+                                    <span class="action-title">35. Realizar benchmarking estruturado de boas práticas
+                                        ESG</span>
+                                    <div class="action-right">
+                                        <span class="pts">15 pts</span>
+                                        <span class="action-toggle">▼</span>
+                                    </div>
+                                </div>
+                                <div class="action-sub">
+                                    <p class="action-sub-desc">Pesquisar e sistematizar referências externas
+                                        relacionadas a temas das campanhas do Regenera, com potencial de aplicação
+                                        interna.</p>
+                                    <span class="action-sub-evidence">Evidência: Arquivo ou print do documento +
+                                        Comentário no form sobre as aplicações potenciais.</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1627,6 +2230,10 @@
                 button.classList.add('active');
                 content.classList.add('show');
             }
+        }
+
+        function toggleAction(item) {
+            item.classList.toggle('open');
         }
     </script>
 </body>
