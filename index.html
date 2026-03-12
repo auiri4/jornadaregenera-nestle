@@ -1295,6 +1295,90 @@
                 text-align: center;
             }
         }
+
+        /* ===== REWARDS ===== */
+        .rewards {
+            background: linear-gradient(160deg, #f0f9f2 0%, #ffffff 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .rewards h2 {
+            font-size: 2.2rem;
+            color: var(--color-primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .rewards > p {
+            color: var(--color-text-light);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .rewards-intro {
+            max-width: 680px;
+            margin: 0 auto 3rem;
+            color: var(--color-text);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .rewards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .reward-card {
+            background: var(--color-white);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 122, 51, 0.08);
+            border-top: 4px solid var(--color-secondary);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .reward-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 122, 51, 0.15);
+        }
+
+        .reward-card .reward-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .reward-card h3 {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .reward-card p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .rewards-cta {
+            font-size: 1.05rem;
+            color: var(--color-primary);
+            font-style: italic;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .rewards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -2113,6 +2197,48 @@
             </div>
         </section>
         <!-- Seção de progresso removida -->
+
+        <section id="rewards" class="rewards">
+            <h2>Sua evolução tem recompensas reais 🏆</h2>
+            <p>Cada nível conquistado abre novas possibilidades. Veja o que espera por você.</p>
+            <p class="rewards-intro">
+                Aqui, o esforço é reconhecido. Cada ação realizada, cada missão concluída e cada nível alcançado
+                é celebrado — porque regenerar o planeta começa com quem age.
+            </p>
+            <div class="rewards-grid">
+                <div class="reward-card">
+                    <span class="reward-icon">🎁</span>
+                    <h3>Kits Nestlé</h3>
+                    <p>Produtos especiais da Nestlé para quem faz a diferença no dia a dia. Uma forma de celebrar
+                        quem coloca a sustentabilidade em prática.</p>
+                </div>
+                <div class="reward-card">
+                    <span class="reward-icon">🎯</span>
+                    <h3>Mentoria com Lideranças</h3>
+                    <p>Acesso exclusivo a conversas e aprendizados com líderes da Nestlé — para quem quer crescer
+                        junto com o movimento.</p>
+                </div>
+                <div class="reward-card">
+                    <span class="reward-icon">📣</span>
+                    <h3>Reconhecimento Oficial</h3>
+                    <p>Seu nome e sua história divulgados nos comunicados internos da empresa. Porque inspirar
+                        colegas também é um ato de regeneração.</p>
+                </div>
+                <div class="reward-card">
+                    <span class="reward-icon">🌟</span>
+                    <h3>Eventos Estratégicos</h3>
+                    <p>Convites para participar de encontros e eventos de alto impacto — espaços onde grandes
+                        ideias se transformam em ação coletiva.</p>
+                </div>
+                <div class="reward-card">
+                    <span class="reward-icon">🎤</span>
+                    <h3>Porta-voz do Regenera</h3>
+                    <p>Represente o movimento em eventos internos e seja uma referência viva de mudança.
+                        Sua voz tem o poder de multiplicar o impacto.</p>
+                </div>
+            </div>
+            <p class="rewards-cta">Pronto para ganhar o seu? Comece agora e construa seu caminho rumo ao reconhecimento. 🌿</p>
+        </section>
 
         <section id="faq" class="faq">
             <h2>Perguntas Frequentes</h2>
